@@ -1,8 +1,10 @@
 import express from "express";
+import cors from "cors";
 const app = express();
 import searchRouter from "./routes/search";
 
 app.use(express.json());
+app.use(cors());
 
 app.use("/search", searchRouter);
 
