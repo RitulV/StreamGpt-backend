@@ -5,7 +5,7 @@ import searchRouter from "./routes/search";
 
 app.use(express.json());
 var corsOptions = {
-  origin: process.env.CLIENT_URL,
+  origin: `${process.env.CLIENT_URL}`,
   allowedHeaders: ["Vercel-auth"],
 };
 app.use(cors(corsOptions));
